@@ -5,22 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Keywords" content="Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian , Facebook Menu Page">
-  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./login.css">
   <!--===============================================================================================-->
 
-  <link rel="stylesheet" href="./css/page.css">
+  <link rel="stylesheet" href="./page.css">
   <!--===============================================================================================-->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.png" type="image/x-icon">
   <!--===============================================================================================-->
-  <link rel="stylesheet" href="./css/profile.css">
+  <link rel="stylesheet" href="./profile.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" href="./css/w3school.css">
+  <link rel="stylesheet" href="./w3school.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./style.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" href="./css/home_page.css">
+  <link rel="stylesheet" href="./home_page.css">
   <!--===============================================================================================-->
-  <link rel="stylesheet" href="./css/bts.min.css">
+  <link rel="stylesheet" href="./bts.min.css">
   <!--===============================================================================================-->
   <link rel="stylesheet" href="./font/css/all.min.css">
   <!--===============================================================================================-->
@@ -28,15 +28,8 @@
   <!--===============================================================================================-->
   <link rel="stylesheet" href="./font/css/fontawesome.css">
   <!--===============================================================================================-->
-
-
-
-  <!---
   <link rel="stylesheet" href="./bts.min.css">
-  <link rel="stylesheet" href="./font/css/all.min.css">
-   <link rel="stylesheet" href="./font/css/fontawesome.min.css">
-   <link rel="stylesheet" href="./font/css/fontawesome.css">
-   --->
+      
 </head>
 <body>
 
@@ -56,7 +49,7 @@
     <h2>News Feed</h2>
     <div class="content_place">
       <div class="poster">
-        <img src="./images/user1.png"><strong><a href="#">Ghs Julian</a></strong>
+        <img src="./user1.png"><strong><a href="#">Ghs Julian</a></strong>
       </div>
       <div align="left" class="post_area">
         <content>
@@ -66,19 +59,19 @@
         </content>
       </div>
       <div align="center" class="actions">
-        <button name="request_btn" type="button" class="action_btn" id="like" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><img class="like_btn" src="./icons/blue-like.png" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><?php echo $count ; ?>765
+        <button name="request_btn" type="button" class="action_btn" id="like" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><img class="like_btn" src="./blue-like.png" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><?php echo $count ; ?>765
         </button>
         <button name="request_btn" type="button" class="action_btn" id="love" data-poster_id="3" data-post_id="5">
-          <img src="./icons/red-heart.png"> 367
+          <img src="./red-heart.png"> 367
         </button>
         <button name="request_btn" type="button" class="action_btn" id="comment" data-poster_id="3" data-post_id="5">
-          <img src="./icons/comment.png"> 2.5K
+          <img src="./comment.png"> 2.5K
         </button>
       </div>
     </div>
 
 
-    <script type="text/javascript" src="./scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery.min.js"></script>
     <script>
       $(document).ready(function () {
         $(".like_bttn").click(function (e) {
@@ -132,7 +125,7 @@ $.ajax({
       //Love React Option
       $(document).ready(function () {
         $("#love").click(function () {
-          $("#love").html('<img src="./icons/red-heart.png">');
+          $("#love").html('<img src="./red-heart.png">');
         });
       });
     </script>
@@ -141,7 +134,7 @@ $.ajax({
 
     <div class="content_place">
       <div class="poster">
-        <img src="./images/user1.png"><strong><a href="#">Ghs Julian</a></strong>
+        <img src="./user1.png"><strong><a href="#">Ghs Julian</a></strong>
       </div>
       <div align="left" class="post_area">
         <content>
@@ -151,18 +144,18 @@ $.ajax({
         </content>
       </div>
       <div align="center" class="actions">
-        <button name="request_btn" type="button" class="action_btn" id="like" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><img class="like_btn" src="./icons/blue-like.png" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><?php echo $count ; ?>765
+        <button name="request_btn" type="button" class="action_btn" id="like" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><img class="like_btn" src="./blue-like.png" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><?php echo $count ; ?>765
         </button>
         <button name="request_btn" type="button" class="action_btn" id="love" data-poster_id="3" data-post_id="5">
-          <img src="./icons/red-heart.png"> 367
+          <img src="./red-heart.png"> 367
         </button>
         <button name="request_btn" type="button" class="action_btn" id="comment" data-poster_id="3" data-post_id="5">
-          <img src="./icons/comment.png"> 2.5K
+          <img src="./comment.png"> 2.5K
         </button>
       </div>
 
 
-      <script type="text/javascript" src="./scripts/jquery.min.js"></script>
+      <script type="text/javascript" src="./jquery.min.js"></script>
       <script>
         $(document).ready(function () {
           $(".like_bttn").click(function (e) {
@@ -180,7 +173,7 @@ $.ajax({
               }
             });
             //$(this).attr("src", "/icons/blue-like.png").html(data);
-            $(this).html('<img class="like_btn" src="./icons/blue-like.png"><?php echo $likes ; ?>');
+            $(this).html('<img class="like_btn" src="./blue-like.png"><?php echo $likes ; ?>');
           });
 
           // COMMENT SECTION AREA
@@ -216,7 +209,7 @@ $.ajax({
         //Love React Option
         $(document).ready(function () {
           $("#love").click(function () {
-            $("#love").html('<img src="./icons/red-heart.png">');
+            $("#love").html('<img src="./red-heart.png">');
           });
         });
       </script>
@@ -243,15 +236,15 @@ $.ajax({
   <div id="Profile" class="tab profile w3-animate-opacity">
     <!---STARTED PROFILE--->
     <div align="center" class="profileg">
-      <img class="profile_user_icon" src="./images/user1.png">
+      <img class="profile_user_icon" src="/user1.png">
       <h4>Ghs Julian</h4>
 
       <button name="request_btn" type="button" class="request_btn request_bttn" data-user="<?php echo $get_id ?>">
         Add Friend
       </button>
       <!---<button name="request_btn" type="button" class="request_bttn request_btn" data-user="<?php echo $get_id ?>">
-      Add Friend
-      </button>--->
+                  Add Friend
+                  </button>--->
       <button name="request_btn" type="button" class="request_btn">
         Message
       </button>
@@ -259,7 +252,7 @@ $.ajax({
         Follow
       </button>
     </div>
-    <script src="./scripts/jquery.min.js"></script>
+    <script src="./jquery.min.js"></script>
     <script>
       $(document).ready(function() {
         $(".request_bttn").click(function (e) {
@@ -314,7 +307,7 @@ $.ajax({
 <ul class="w3-ul chatlist">
 <!---aa href="message.php?friends_name=<?php echo $friends_name ?>&msg_id=<?php echo $msg_id ?>&friends_id=<?php echo $friends_id ?>&user_id=<?php echo $id ?>&friends_avtar=<?php echo $avtar ; ?>">-->
 <li class="w3">
-<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+<img align="left" src="./user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
 </li>
 </ul>
 
@@ -322,7 +315,7 @@ $.ajax({
 <ul class="w3-ul chatlist">
 <!--<a href="message.php?friends_name=<?php echo $friends_name ?>&msg_id=<?php echo $msg_id ?>&friends_id=<?php echo $friends_id ?>&user_id=<?php echo $id ?>&friends_avtar=<?php echo $avtar ; ?>">-->
 <li class="w3">
-<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+<img align="left" src="./user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
 </li>
 </ul>
 
@@ -342,7 +335,7 @@ $.ajax({
 
 <ul class="w3-ul noti">
 <li class="w3">
-<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+<img align="left" src="./user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
 <p>
 Sent you a text message
 </p>
@@ -351,7 +344,7 @@ Sent you a text message
 
 <ul class="w3-ul noti">
 <li class="w3">
-<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+<img align="left" src="./user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
 <p>
 Sent you a new Message
 </p>
@@ -369,32 +362,32 @@ Sent you a new Message
 <div id="Menu" class="tab menu w3-animate-opacity">
 <ul class="w3-ul menu_items">
 <li class="profile_page" data-id="profile">
-<img align="left" src="./icons/profile.png"><strong>Profile</strong>
+<img align="left" src="./profile.png"><strong>Profile</strong>
 </li>
 <li class="profile_page" data-id="login">
-<img align="left" src="./icons/login.png"><strong>Sign In</strong>
+<img align="left" src="./login.png"><strong>Sign In</strong>
 </li>
 <li class="profile_page" data-id="signup">
-<img align="left" src="./icons/contact.png"><strong>Sign Up</strong>
+<img align="left" src="./contact.png"><strong>Sign Up</strong>
 </li>
 <li class="profile_page" data-id="signout">
-<img align="left" src="./icons/info.png"><strong>Sign Out</strong>
+<img align="left" src="./info.png"><strong>Sign Out</strong>
 </li>
 <li class="profile_page" data-id="aboutus">
-<img align="left" src="./icons/coding.png"><strong>About US</strong>
+<img align="left" src="./coding.png"><strong>About US</strong>
 </li>
 <li class="profile_page" data-id="contactus">
-<img align="left" src="./icons/contact.png"><strong>Contact US</strong>
+<img align="left" src="./contact.png"><strong>Contact US</strong>
 </li>
 <li class="profile_page" data-id="edit">
-<img align="left" src="./icons/comment.png"><strong>Edit Profile</strong>
+<img align="left" src="./comment.png"><strong>Edit Profile</strong>
 </li>
 <li class="profile_page" data-id="find_people">
-<img align="left" src="./icons/search2_1.png"><strong>Find Peoples</strong>
+<img align="left" src="./search2_1.png"><strong>Find Peoples</strong>
 </li>
 </ul>
 <div align="center" class="footer">
-<img src="./images/user1.png"><br>
+<img src="./user1.png"><br>
 <strong>Devoloped & Designed By :</strong>
 <h5>Ghs Julian</h5>
 <p>
@@ -417,7 +410,7 @@ All Reserved
 <div id="login" class="w3-modal w3-animate-opacity">
 <div align="center" class="login w3-card-24">
 <h1> Please Login </h1>
-<img class="log_icon" src="./icons/male.png"><br>
+<img class="log_icon" src="./male.png"><br>
 <div class="log_area">
 <input class="input_box" id="name" type="text" placeholder="Enter Name" accept="username">
 </div>
@@ -510,8 +503,8 @@ Some text. Some text. Some text.
 
 
 
-<script src="./scripts/jquery.min.js"></script>
-<script src="./scripts/jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
 <script>
 $(document).ready(function () {
 $(".login_btn").click(function (e) {
@@ -603,29 +596,29 @@ $("#contactus").css("display", "block");
 $(".back").click(function (e) {
 e.preventDefault();
 $("#contactus").css("display", " none");
-$(".arrow").attr("src", "/icons/home5.png");
+$(".arrow").attr("src", "/home5.png");
 $(".hide").show();
 });
 }
 if (pgname == "edit") {
 $(".hide").hide();
-$(".arrow").attr("src", "/icons/arrow.png");
+$(".arrow").attr("src", "/arrow.png");
 $("#edit").css("display", "block");
 $(".back").click(function (e) {
 e.preventDefault();
 $("#edit").css("display", " none");
-$(".arrow").attr("src", "/icons/home5.png");
+$(".arrow").attr("src", "/home5.png");
 $(".hide").show();
 });
 }
 if (pgname == "find_people") {
 $(".hide").hide();
-$(".arrow").attr("src", "/icons/arrow.png");
+$(".arrow").attr("src", "/arrow.png");
 $("#find_people").css("display", "block");
 $(".back").click(function (e) {
 e.preventDefault();
 $("#find_people").css("display", " none");
-$(".arrow").attr("src", "/icons/home5.png");
+$(".arrow").attr("src", "/home5.png");
 $(".hide").show();
 });
 }
@@ -637,7 +630,7 @@ $(".hide").show();
 </div>
 
 
-<script src="./scripts/jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
 <script>
 /* HIDE NAVBAR */
 $(document).ready(function () {
