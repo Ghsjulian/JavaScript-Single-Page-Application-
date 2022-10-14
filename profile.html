@@ -1,0 +1,59 @@
+<div id="profile" class="w3-modal profile">
+<!---STARTED PROFILE--->
+<div align="center" class="profileg">
+  <img class="profile_user_icon" src="./images/user1.png">
+ <h4>Ghs Julian</h4>
+
+<button name="request_btn" type="button" class="request_btn request_bttn" data-user="<?php echo $get_id ?>">
+Add Friend
+</button>
+<!---<button name="request_btn" type="button" class="request_bttn request_btn" data-user="<?php echo $get_id ?>">
+Add Friend
+</button>--->
+<button name="request_btn" type="button" class="request_btn">
+  Message
+</button>
+<button name="request_btn" type="button" class="request_btn">
+  Follow
+</button>
+</div>
+<script src="./scripts/jquery.min.js"></script>
+<script>
+ $(document).ready(function() {
+ $(".request_bttn").click(function (e){
+e.preventDefault();
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear;
+var person = $(".request_bttn").data("user");
+var action = "send_friend_request";
+$.ajax({
+         url  : "function.php",
+         type : "POST",
+         data : "request_to_id="+person+"&action="+action+"&date="+someday,
+          success : function (data) {
+           $server = data;
+         }
+       });
+  $(".request_bttn").addClass("disable_btn").removeClass("request_bttn").fadeIn("slow"). text("Sending...");
+   });
+});
+</script>
+<!---STARTED ABOUT INFORMATION---->
+ <div align="left" class="profile_info">
+ <strong align="center"><i class="fa fa-circle-info"></i>  See About <?php echo $name ; ?> Ghs Julian</strong>
+ <br>
+
+<ul class="info_data">
+ <li><i class="fa fa-life-ring"></i>Country : </b><?php echo $country; ?> United States (USA) </li>
+ <li><i class="fa fa-home"></i>Lives In : </b> <?php echo $city; ?> New York , DC</li>
+ <li><i class="fa fa-user-tie"></i>Profession : </b> <?php echo $profession; ?> Web Devoloper </li>
+ <li><i class="fa fa-book"></i>Study At : </b><?php echo $school; ?> Washington DC </li>
+ <li><i class="fa fa-toolbox"></i>Date Of Birth : </b><?php echo $birth; ?> 04 January 2003</li>
+  <li><i class="fa fa-user-large"></i>Gender : </b> <?php echo $gender; ?> Male</li>
+</ul>
+ </div>
+<!---ENDED ABOUT INFORMATION--->
+</div>
+<!----ENDED PROFILE--->     
