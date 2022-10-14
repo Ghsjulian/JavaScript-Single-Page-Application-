@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head>
+
+<title>Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian , Facebook Menu Page">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./css/hck.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./css/w3school.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./css/bts.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./font/css/all.min.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" href="./font/css/fontawesome.min.css">
+ <!--===============================================================================================-->
+ <link rel="stylesheet" href="./font/css/fontawesome.css">
+ <!--===============================================================================================-->
+ <link rel="stylesheet" href="./font/css/fontawesome.css">
+</head><body>
+
+<div align="center" class="info_area">
+<div id="output"></div>
+<button class="lets_go_btn">Start</button>
+</div>
+<script>
+var recognition = new webkitSpeechRecognition();
+recognition.onresult = function (event) {
+    var text = event.results[0][0].transcript;
+    var output = document.getElementById("output").innerHTML=text;
+    read(text);
+}
+function read(text) {
+    var Speech = new SpeechSynthesisUtterance();
+    Speech.text = text;
+    Speech.volume = 1;
+    Speech.rate = 1;
+    Speech.pitch = 1;
+    Speech.lang = 'en-US';
+    window.speechSynthesis.speak(Speech);		
+}
+</script>
+</body></html>

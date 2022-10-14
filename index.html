@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Keywords" content="Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian , Facebook Menu Page">
+  <link rel="stylesheet" href="./css/login.css">
+  <!--===============================================================================================-->
+
+  <link rel="stylesheet" href="./css/page.css">
+  <!--===============================================================================================-->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./css/profile.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./css/w3school.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./css/style.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./css/home_page.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./css/bts.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./font/css/all.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./font/css/fontawesome.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="./font/css/fontawesome.css">
+  <!--===============================================================================================-->
+
+
+
+  <!---
+  <link rel="stylesheet" href="./bts.min.css">
+  <link rel="stylesheet" href="./font/css/all.min.css">
+   <link rel="stylesheet" href="./font/css/fontawesome.min.css">
+   <link rel="stylesheet" href="./font/css/fontawesome.css">
+   --->
+</head>
+<body>
+
+
+  <div id="header" class="icon-bar fixed-top">
+    <a class="page ar_bk"><img class="arrow" src="./icons/arrow.png"></a>
+    <a class="page back" onclick="openNav('Home')" href="#"><img class="arrow" src="./icons/home5.png"></a>
+    <a class="page hide" onclick="openNav('Profile')" href="#"><img src="./icons/male.png"></a>
+    <a class="page hide" onclick="openNav('Messages')" href="#"><img src="./icons/email2.png"></a>
+    <a class="page hide" onclick="openNav('Notification')" href="#"><img src="./icons/bell-ring.png"></a>
+    <a class="page hide mnu" onclick="openNav('Menu')" href="#"><img src="./icons/menu2.png"></a>
+  </div>
+
+
+
+  <div id="Home" class="tab home w3-animate-opacity">
+    <h2>News Feed</h2>
+    <div class="content_place">
+      <div class="poster">
+        <img src="./images/user1.png"><strong><a href="#">Ghs Julian</a></strong>
+      </div>
+      <div align="left" class="post_area">
+        <content>
+          <!--- Hello , User I'm Julian . I Am A Web Developer And Designer . Welcome To My Site . This Is My Social Media Web Site...--->
+          <?php echo $post_content; ?>
+          Him to the doctor and I can't wait to see you guys soon as I get home I will send you a new one if you want to come by and see you soon as I get home I will
+        </content>
+      </div>
+      <div align="center" class="actions">
+        <button name="request_btn" type="button" class="action_btn" id="like" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><img class="like_btn" src="./icons/blue-like.png" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><?php echo $count ; ?>765
+        </button>
+        <button name="request_btn" type="button" class="action_btn" id="love" data-poster_id="3" data-post_id="5">
+          <img src="./icons/red-heart.png"> 367
+        </button>
+        <button name="request_btn" type="button" class="action_btn" id="comment" data-poster_id="3" data-post_id="5">
+          <img src="./icons/comment.png"> 2.5K
+        </button>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="./scripts/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".like_bttn").click(function (e) {
+          e.preventDefault();
+          var post_id = $(this).data("postid");
+          var post = $(this).data("post");
+          var poster = $(this).data("poster");
+          var action = "Like";
+          $.ajax({
+            url: "post_manager.php",
+            type: "POST",
+            data: "poster="+poster+"& action="+action+"& postid="+post_id+"&post="+post,
+            success: function (data) {
+              //       alert(data);
+            }
+          });
+          //$(this).attr("src", "/icons/blue-like.png").html(data);
+          $(this).html('<img class="like_btn" src="./icons/blue-like.png"><?php echo $likes ; ?>');
+        });
+
+        // COMMENT SECTION AREA
+
+        $(".load_comment").click(function(e) {
+          e.preventDefault();
+          $(this).load("comments.php");
+        });
+      });
+
+      $(document).ready(function () {
+        $("form").on('submit', function(e) {
+          e.preventDefault();
+          var comment = this.cmnt.val();
+          alert(comment);
+        });
+      });
+      /*
+$.ajax({
+        url:"post_manager.php",
+        type:"POST",
+        data: comment,
+        contentType : false,
+        processData : false,
+       success:function (data) {
+       alert(data);
+         }
+      });
+      */
+    </script>
+
+    <script>
+      //Love React Option
+      $(document).ready(function () {
+        $("#love").click(function () {
+          $("#love").html('<img src="./icons/red-heart.png">');
+        });
+      });
+    </script>
+    <!----ENDED POST AREA---->
+
+
+    <div class="content_place">
+      <div class="poster">
+        <img src="./images/user1.png"><strong><a href="#">Ghs Julian</a></strong>
+      </div>
+      <div align="left" class="post_area">
+        <content>
+          <!--- Hello , User I'm Julian . I Am A Web Developer And Designer . Welcome To My Site . This Is My Social Media Web Site...--->
+          <?php echo $post_content; ?>
+          Him to the doctor and I can't wait to see you guys soon as I get home I will send you a new one if you want to come by and see you soon as I get home I will
+        </content>
+      </div>
+      <div align="center" class="actions">
+        <button name="request_btn" type="button" class="action_btn" id="like" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><img class="like_btn" src="./icons/blue-like.png" data-post="<?php echo $post_content; ?>" data-poster="<?php echo $poster_name; ?>" data-postid="<?php echo $post_id; ?>"><?php echo $count ; ?>765
+        </button>
+        <button name="request_btn" type="button" class="action_btn" id="love" data-poster_id="3" data-post_id="5">
+          <img src="./icons/red-heart.png"> 367
+        </button>
+        <button name="request_btn" type="button" class="action_btn" id="comment" data-poster_id="3" data-post_id="5">
+          <img src="./icons/comment.png"> 2.5K
+        </button>
+      </div>
+
+
+      <script type="text/javascript" src="./scripts/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $(".like_bttn").click(function (e) {
+            e.preventDefault();
+            var post_id = $(this).data("postid");
+            var post = $(this).data("post");
+            var poster = $(this).data("poster");
+            var action = "Like";
+            $.ajax({
+              url: "post_manager.php",
+              type: "POST",
+              data: "poster="+poster+"& action="+action+"& postid="+post_id+"&post="+post,
+              success: function (data) {
+                //       alert(data);
+              }
+            });
+            //$(this).attr("src", "/icons/blue-like.png").html(data);
+            $(this).html('<img class="like_btn" src="./icons/blue-like.png"><?php echo $likes ; ?>');
+          });
+
+          // COMMENT SECTION AREA
+
+          $(".load_comment").click(function(e) {
+            e.preventDefault();
+            $(this).load("comments.php");
+          });
+        });
+
+        $(document).ready(function () {
+          $("form").on('submit', function(e) {
+            e.preventDefault();
+            var comment = this.cmnt.val();
+            alert(comment);
+          });
+        });
+        /*
+$.ajax({
+        url:"post_manager.php",
+        type:"POST",
+        data: comment,
+        contentType : false,
+        processData : false,
+       success:function (data) {
+       alert(data);
+         }
+      });
+      */
+      </script>
+
+      <script>
+        //Love React Option
+        $(document).ready(function () {
+          $("#love").click(function () {
+            $("#love").html('<img src="./icons/red-heart.png">');
+          });
+        });
+      </script>
+      <!----ENDED POST AREA---->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="Profile" class="tab profile w3-animate-opacity">
+    <!---STARTED PROFILE--->
+    <div align="center" class="profileg">
+      <img class="profile_user_icon" src="./images/user1.png">
+      <h4>Ghs Julian</h4>
+
+      <button name="request_btn" type="button" class="request_btn request_bttn" data-user="<?php echo $get_id ?>">
+        Add Friend
+      </button>
+      <!---<button name="request_btn" type="button" class="request_bttn request_btn" data-user="<?php echo $get_id ?>">
+      Add Friend
+      </button>--->
+      <button name="request_btn" type="button" class="request_btn">
+        Message
+      </button>
+      <button name="request_btn" type="button" class="request_btn">
+        Follow
+      </button>
+    </div>
+    <script src="./scripts/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".request_bttn").click(function (e) {
+          e.preventDefault();
+          var today, someday, text;
+          today = new Date();
+          someday = new Date();
+          someday.setFullYear;
+          var person = $(".request_bttn").data("user");
+          var action = "send_friend_request";
+          $.ajax({
+            url: "function.php",
+            type: "POST",
+            data: "request_to_id="+person+"&action="+action+"&date="+someday,
+            success: function (data) {
+              $server = data;
+            }
+          });
+          $(".request_bttn").addClass("disable_btn").removeClass("request_bttn").fadeIn("slow"). text("Sending...");
+        });
+      });
+    </script>
+    <!---STARTED ABOUT INFORMATION---->
+    <div align="left" class="profile_info">
+      <strong align="center"><i class="fa fa-circle-info"></i>  See About <?php echo $name ; ?> Ghs Julian</strong>
+      <br>
+
+      <ul class="info_data">
+        <li><i class="fa fa-life-ring"></i>Country : </b><?php echo $country; ?> United States (USA) </li>
+      <li><i class="fa fa-home"></i>Lives In : </b> <?php echo $city; ?> New York , DC</li>
+    <li><i class="fa fa-user-tie"></i>Profession : </b> <?php echo $profession; ?> Web Devoloper </li>
+  <li><i class="fa fa-book"></i>Study At : </b><?php echo $school; ?> Washington DC </li>
+<li><i class="fa fa-toolbox"></i>Date Of Birth : </b><?php echo $birth; ?> 04 January 2003</li>
+<li><i class="fa fa-user-large"></i>Gender : </b> <?php echo $gender; ?> Male</li>
+</ul>
+</div>
+<!---ENDED ABOUT INFORMATION--->
+
+
+
+</div>
+<!----ENDED PROFILE--->
+
+
+
+
+
+
+<div id="Messages" class="tab message w3-animate-opacity">
+
+
+<ul class="w3-ul chatlist">
+<!---aa href="message.php?friends_name=<?php echo $friends_name ?>&msg_id=<?php echo $msg_id ?>&friends_id=<?php echo $friends_id ?>&user_id=<?php echo $id ?>&friends_avtar=<?php echo $avtar ; ?>">-->
+<li class="w3">
+<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+</li>
+</ul>
+
+
+<ul class="w3-ul chatlist">
+<!--<a href="message.php?friends_name=<?php echo $friends_name ?>&msg_id=<?php echo $msg_id ?>&friends_id=<?php echo $friends_id ?>&user_id=<?php echo $id ?>&friends_avtar=<?php echo $avtar ; ?>">-->
+<li class="w3">
+<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+</li>
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="Notification" class="tab notification w3-animate-opacity">
+
+
+
+
+
+<ul class="w3-ul noti">
+<li class="w3">
+<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+<p>
+Sent you a text message
+</p>
+</li>
+</ul>
+
+<ul class="w3-ul noti">
+<li class="w3">
+<img align="left" src="./images/user1.png"><strong><?php echo $friends_name;?> Ghs Julian</strong>
+<p>
+Sent you a new Message
+</p>
+</li>
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="Menu" class="tab menu w3-animate-opacity">
+<ul class="w3-ul menu_items">
+<li class="profile_page" data-id="profile">
+<img align="left" src="./icons/profile.png"><strong>Profile</strong>
+</li>
+<li class="profile_page" data-id="login">
+<img align="left" src="./icons/login.png"><strong>Sign In</strong>
+</li>
+<li class="profile_page" data-id="signup">
+<img align="left" src="./icons/contact.png"><strong>Sign Up</strong>
+</li>
+<li class="profile_page" data-id="signout">
+<img align="left" src="./icons/info.png"><strong>Sign Out</strong>
+</li>
+<li class="profile_page" data-id="aboutus">
+<img align="left" src="./icons/coding.png"><strong>About US</strong>
+</li>
+<li class="profile_page" data-id="contactus">
+<img align="left" src="./icons/contact.png"><strong>Contact US</strong>
+</li>
+<li class="profile_page" data-id="edit">
+<img align="left" src="./icons/comment.png"><strong>Edit Profile</strong>
+</li>
+<li class="profile_page" data-id="find_people">
+<img align="left" src="./icons/search2_1.png"><strong>Find Peoples</strong>
+</li>
+</ul>
+<div align="center" class="footer">
+<img src="./images/user1.png"><br>
+<strong>Devoloped & Designed By :</strong>
+<h5>Ghs Julian</h5>
+<p>
+<b>&copy</b>Copyright 2019-2022<br>
+All Reserved
+</p>
+</div>
+
+
+<!--============MODAL PAGE==============--->
+
+
+<!--     INCLUDE ALL PAGES HERE          -->
+
+
+<!---============MODAL PAGE==============--->
+
+
+
+<div id="login" class="w3-modal w3-animate-opacity">
+<div align="center" class="login w3-card-24">
+<h1> Please Login </h1>
+<img class="log_icon" src="./icons/male.png"><br>
+<div class="log_area">
+<input class="input_box" id="name" type="text" placeholder="Enter Name" accept="username">
+</div>
+<br>
+<div class="log_area">
+<input class="input_box" id="password" type="password" placeholder="Enter Password" accept="password">
+</div>
+<br>
+<button class="login_btn" id="login_btn" type="submit">Sign In</button>
+<br><br>
+<strong>
+Don't Have An Account ?
+</strong><br>
+<a class="signup" href="Signup"><b>Sign Up</b></a>
+
+
+<div id="signup" class="w3-modal">
+<h1>Sign Up Page</h1>
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="signup" class="w3-modal">
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+<div id="signout" class="w3-modal">
+<h1>Login Pages</h1>
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+<div id="aboutus" class="w3-modal">
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+<div id="contactus" class="w3-modal">
+<h1>Login Pages</h1>
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+<div id="edit" class="w3-modal">
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+<div id="find_people" class="w3-modal">
+<h1>Login Pages</h1>
+<p>
+Some text. Some text. Some text.
+</p>
+<p>
+Some text. Some text. Some text.
+</p>
+</div>
+
+
+
+
+<script src="./scripts/jquery.min.js"></script>
+<script src="./scripts/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+$(".login_btn").click(function (e) {
+e.preventDefault();
+var name = $("#name").val();
+var password = $("#password").val();
+if (name !== '' || password !== '') {
+/* AJAX REQUEST  */
+}
+
+});
+
+
+
+$(".signup").click(function (e) {
+e.preventDefault();
+$("#signup").css("display", "block");
+});
+$(".back").click(function (e) {
+e.preventDefault();
+$("#signup").css("display", "none");
+});
+});
+</script>
+<script>
+$(document).ready(function () {
+$(".profile_page").click(function (e) {
+e.preventDefault();
+var pgname = $(this).data("id");
+if (pgname == "profile") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#profile").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#profile").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "login") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#login").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#login").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "signup") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#signup").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#signup").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "signout") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#signout").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#signout").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "aboutus") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#aboutus").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#aboutus").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "contactus") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#contactus").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#contactus").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "edit") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#edit").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#edit").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+if (pgname == "find_people") {
+$(".hide").hide();
+$(".arrow").attr("src", "/icons/arrow.png");
+$("#find_people").css("display", "block");
+$(".back").click(function (e) {
+e.preventDefault();
+$("#find_people").css("display", " none");
+$(".arrow").attr("src", "/icons/home5.png");
+$(".hide").show();
+});
+}
+});
+});
+</script>
+
+<!--============MODAL PAGE==============--->
+</div>
+
+
+<script src="./scripts/jquery.min.js"></script>
+<script>
+/* HIDE NAVBAR */
+$(document).ready(function () {
+$(".page").click(function(e) {
+e.preventDefault();
+$(".page").removeClass("active");
+$(this).removeClass("active").addClass("active");
+});
+});
+
+openNav('Home');
+function openNav(nav) {
+var i;
+var x = document.getElementsByClassName("tab");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+document.getElementById(nav).style.display = "block";
+}
+</script>
+</body>
+</html>
+<!---
+EMAIL : bcsconfidence.personalmail@gmail.com
+--->

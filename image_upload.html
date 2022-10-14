@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<title>Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="Ghs Julian | Web Designer | Web Developer | Programmer Ghs Julian , Facebook Menu Page">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./css/hck.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./css/w3school.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./css/bts.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="./font/css/all.min.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" href="./font/css/fontawesome.min.css">
+ <!--===============================================================================================-->
+ <link rel="stylesheet" href="./font/css/fontawesome.css">
+ <!--===============================================================================================-->
+ <link rel="stylesheet" href="./font/css/fontawesome.css">
+</head><body>
+    
+    
+    
+<h1 align="center">Ghs Julian</h1><br><br>
+<h4 class="nm"></h4><br><br>
+<form id="myfrm">
+<div align="center" class="info_area">
+  <div class="profile_avtar">
+  <img align="center" class="preview" id="preview" src="./icons/profile1.png">
+<input id="photo" type="file" name="photo" onchange="previewFile(this);" required accept="image/*">
+</div>
+
+
+<button class="lets_go_btn">
+    Upload
+</button>
+</form>
+
+<script src="./scripts/jquery.min.js"></script>
+<script>
+function previewFile(input){
+var file = $("input[type=file]").get(0).files[0];
+   if(file){
+var reader = new FileReader();
+  reader.onload = function(){
+$("#preview").attr("src", reader.result);
+            }
+reader.readAsDataURL(file);
+        }
+  }
+$(document). ready (function () {
+ $("#myfrm").on("submit",function(e){
+e.preventDefault();
+var form_data = new FormData(this);
+$.ajax({
+      url : "test.php",
+      type : "POST",
+      data : form_data,
+      contentType : false,
+      processData : false,
+      success: function (data) {
+      alert (data);
+      }
+   });
+ });
+});
+</script>
+</body></html>  
